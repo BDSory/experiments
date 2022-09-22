@@ -438,13 +438,24 @@
 //   }
 // }
 //below is from the docs on callbacks; tightening up
-function greeting(name){
-  alert(`Hallo, ${name}`);
-}
+// function greeting(name){
+//   alert(`Hallo, ${name}`);
+// }
 
-function processUserInput(callback) {
-  const name = prompt("Please enter your name.");
-  callback(name)
-}
+// function processUserInput(callback) {
+//   const name = prompt("Please enter your name.");
+//   callback(name)
+// }
 
-processUserInput(greeting);
+// processUserInput(greeting);
+
+const person = {
+  first : 'Bryan',
+  last : 'Sory',
+  fullName() {const {first, last} = this;
+    return `${first} ${last}`},
+  printBio(msg) {
+    console.log(`${this.fullName()} ${msg}`);
+  }
+  }
+  
